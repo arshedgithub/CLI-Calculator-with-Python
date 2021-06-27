@@ -1,4 +1,4 @@
-import functions
+from functions import Operands
 
 print("Welcome to My Python Calculator")
 
@@ -8,17 +8,22 @@ while True:
 
     c = input("Enter the Letter : ")
 
+    a = float(input("Enter the First Operand : "))
+    b = float(input("Enter the Second Operand : "))
+
+    operands = Operands(a, b)
+
     if c == 'a':
-        functions.addition()
+        operands.addition()
 
     elif c == 's':
-        functions.substitution()
+        operands.substitution()
 
     elif c == 'm':
-        functions.multiplication()
+        operands.multiplication()
 
     elif c == 'd':
-        functions.division()
+        operands.division()
 
     elif c == 'q':
         break

@@ -1,4 +1,4 @@
-from functions import Operands
+from class import Operands
 
 print("Welcome to My Python Calculator")
 

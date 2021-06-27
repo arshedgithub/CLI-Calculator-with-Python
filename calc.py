@@ -1,4 +1,4 @@
-from class import Operands
+from operands import Operands
 
 print("Welcome to My Python Calculator")
 
@@ -8,8 +8,18 @@ while True:
 
     c = input("Enter the Letter : ")
 
-    a = float(input("Enter the First Operand : "))
-    b = float(input("Enter the Second Operand : "))
+    if c.strip() == '':
+        continue
+
+    elif c == 'q':
+        break
+
+    try:
+        a = float(input("Enter the First Operand : "))
+        b = float(input("Enter the Second Operand : "))
+
+    except ValueError:
+        print("Error : Invalid input")
 
     operands = Operands(a, b)
 
@@ -24,9 +34,6 @@ while True:
 
     elif c == 'd':
         operands.division()
-
-    elif c == 'q':
-        break
 
     else:
         print("Sorry, Invalid Input\n")
